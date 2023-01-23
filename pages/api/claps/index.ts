@@ -1,6 +1,6 @@
 import { corsHandler } from "@/lib/utils/cors";
 import { catchErrors } from "@/lib/utils/middleware";
-import prisma from '@/lib/prisma/prisma';
+import { prisma } from '@/lib/prisma/prisma';
 import type { NextApiRequest, NextApiResponse } from "next";
 import { ApiError } from "next/dist/server/api-utils";
 import HttpStatus from 'http-status-codes';
