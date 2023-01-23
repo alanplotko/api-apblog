@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "dbpush": "dotenv -e .env.local -- npx prisma db push --schema=./prisma/postgres.prisma",
-    "prisma": "dotenv -e .env.local -- npx prisma generate --schema=./prisma/postgres.prisma"
+    "dbpush": "dotenv -e .env.local -- npx prisma db push --schema=./prisma/schema.prisma",
+    "prisma": "dotenv -e .env.local -- npx prisma generate --schema=./prisma/schema.prisma"
   },
   "dependencies": {
     "@next/font": "13.1.4",
