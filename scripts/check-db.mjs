@@ -1,10 +1,10 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import { PrismaClient } from '@prisma/client';
 import chalk from 'chalk';
 import spawn from 'cross-spawn';
 import * as child from 'child_process';
-import dotenv from 'dotenv';
-
-dotenv.config();
 
 if (process.env.SKIP_DB_CHECK) {
   console.log('Skipping database check.');

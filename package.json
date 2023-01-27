@@ -5,12 +5,12 @@
   "scripts": {
     "dev": "next dev -p 5000",
     "build": "next build",
-    "docker-start": "npm-run-all check-db start",
+    "docker-start": "npm-run-all prisma check-db start",
     "start": "next start",
     "check-db": "node scripts/check-db.mjs",
     "lint": "next lint",
-    "dbpush": "dotenv -e .env.local -- npx prisma db push --schema=./prisma/schema.prisma",
-    "prisma": "dotenv -e .env.local -- npx prisma generate --schema=./prisma/schema.prisma"
+    "dbpush": "dotenv -e .env.local -- npx prisma db push",
+    "prisma": "prisma generate"
   },
   "dependencies": {
     "@next/font": "13.1.4",
