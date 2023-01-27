@@ -35,4 +35,4 @@ EXPOSE 5000
 
 ENV PORT 5000
 
-CMD ["yarn", "start"]
+CMD ["yarn", "docker-start"]

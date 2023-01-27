@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev -p 5000",
     "build": "next build",
+    "docker-start": "npm-run-all check-db start",
     "start": "next start",
+    "check-db": "node scripts/check-db.mjs",
     "lint": "next lint",
     "dbpush": "dotenv -e .env.local -- npx prisma db push --schema=./prisma/schema.prisma",
     "prisma": "dotenv -e .env.local -- npx prisma generate --schema=./prisma/schema.prisma"
@@ -13,9 +15,12 @@
   "dependencies": {
     "@next/font": "13.1.4",
     "@prisma/client": "^4.9.0",
+    "chalk": "^5.2.0",
+    "child_process": "^1.0.2",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.0",
     "cors": "^2.8.5",
+    "cross-spawn": "^7.0.3",
     "crypto-js": "^4.1.1",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.4",
