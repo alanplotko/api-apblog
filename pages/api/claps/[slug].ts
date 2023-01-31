@@ -27,6 +27,7 @@ const getClapsForPost = async (req: NextApiRequest, res: NextApiResponse) => {
       where: { slug },
       select: { claps: true },
     }) || { claps: 0 };
+
     return res.status(200).json(claps);
   } catch (e) {
     throw new ApiError(HttpStatus.INTERNAL_SERVER_ERROR, 'Failed to get claps');
